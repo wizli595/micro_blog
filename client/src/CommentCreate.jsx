@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
+import propTypes from 'prop-types';
 
 const CommentCreate = ({ postId }) => {
   const [content, setContent] = useState("");
@@ -30,5 +31,9 @@ const CommentCreate = ({ postId }) => {
     </div>
   );
 };
+
+CommentCreate.propTypes = {
+  postId: propTypes.string
+}
 
 export default CommentCreate;

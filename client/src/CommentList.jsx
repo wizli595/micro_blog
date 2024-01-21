@@ -1,4 +1,4 @@
-import React from "react";
+import propTypes from 'prop-types';
 
 const CommentList = ({ comments }) => {
   const renderedComments = comments.map((comment) => {
@@ -21,5 +21,9 @@ const CommentList = ({ comments }) => {
 
   return <ul>{renderedComments}</ul>;
 };
+
+CommentList.propTypes = {
+  comments: propTypes.array
+}
 
 export default CommentList;
